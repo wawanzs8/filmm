@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Example</title>
+    <!-- Link Swiper CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+  
+
+    <nav class="navbar">
+        <div class="navbarnav">
+          <ul>
+            <li><a href="#" class="menu-btn" data-target="beranda">Beranda</a></li>
+            <li><a href="#" class="menu-btn" data-target="anime">Anime</a></li>
+            <li><a href="#" class="menu-btn" data-target="movie">Movie</a></li>
+          </ul>
+        </div>
+        <a href="#" id="hamburger"> <i data-feather="menu"></i></a>
+      </nav>
+
+    <div class="content">
+        <div id="beranda" class="content-item active">
+            <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide"><img src="courosel/avatar.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="courosel/moneyheistt.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="courosel/tr.jpg" alt=""></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div id="anime" class="content-item">
+            <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide"><img src="img/bl.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="courosel/att.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="courosel/jjk.jpg" alt=""></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div id="movie" class="content-item">
+            <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide"><img src="courosel/D2jvOdmUgAALnnx.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="courosel/JM2_INTL_30Sht_BRIDGE_03-e1575889045252.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="courosel/jjk.jpg" alt=""></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var splides = document.querySelectorAll('.splide');
+        splides.forEach(function(splideElement) {
+          new Splide(splideElement, {
+            type  : 'fade',
+            rewind: true,
+            arrows  : false,
+            autoplay: true,
+            interval: 3000,
+          }).mount();
+        });
+      });
+    </script>
+
+    <!-- icon -->
+    <script>
+     feather.replace();
+    </script>
+
+    <script src="courasel.js"></script>
+</body>
+</html>
